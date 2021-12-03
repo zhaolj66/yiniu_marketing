@@ -9,6 +9,7 @@ import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Properties;
 
 /**
@@ -61,7 +62,7 @@ public class ActionLogGen {
                         logBean.setDeviceType("mi6");
                         logBean.setReleaseChannel("mi移动商店");
                         logBean.setResolution("2048*1028");
-                        logBean.setEventId(RandomStringUtils.randomAlphabetic(1));
+                        logBean.setEventId(RandomStringUtils.randomAlphabetic(1).toLowerCase());
                         HashMap<String, String> prperties = new HashMap<>();
                         for (int i = 0; i <RandomUtils.nextInt(1,5); i++) {
                             prperties.put("k"+RandomUtils.nextInt(1,10),"v"+RandomUtils.nextInt(1,20));
