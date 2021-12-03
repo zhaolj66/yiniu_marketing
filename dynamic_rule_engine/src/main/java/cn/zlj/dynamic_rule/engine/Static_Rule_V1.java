@@ -1,4 +1,4 @@
-package cn.zlj.dynamic_rule.static_rule;
+package cn.zlj.dynamic_rule.engine;
 
 import cn.zlj.dynamic_rule.pojo.LogBean;
 import cn.zlj.dynamic_rule.pojo.ResultBean;
@@ -15,7 +15,6 @@ import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.KeyedProcessFunction;
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
-import org.apache.flink.util.CollectionUtil;
 import org.apache.flink.util.Collector;
 import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.apache.hadoop.hbase.TableName;
@@ -23,7 +22,6 @@ import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.util.Bytes;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Properties;
 
